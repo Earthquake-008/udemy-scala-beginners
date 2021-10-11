@@ -15,7 +15,7 @@ object Functions extends App {
   def aRepeatedFunction(aString: String, n: Int): String = {
     if (n == 1) aString
     else aString + aRepeatedFunction(aString, n-1)
-  }
+  }//always put result type for recursive function
 
   println(aRepeatedFunction("hello",3))
 
@@ -40,15 +40,20 @@ object Functions extends App {
     4.  Tests if a number is prime.
    */
 
+  //1
+  //def greetingForkid(name: String, age: Int): String =
+  //  println("Hi, my name is $name and i am $age years old.")// this is unit so it's side effect
   def greetingForKids(name: String, age: Int): String =
     "Hi, my name is " + name + " and I am " + age + " years old."
   println(greetingForKids("David", 12))
+ //2
 
   def factorial(n: Int): Int =
     if (n <= 0) 1
     else n * factorial(n-1)
 
   println(factorial(5))
+//3
 
   def fibonacci(n: Int): Int =
     if (n <= 2) 1
@@ -56,6 +61,7 @@ object Functions extends App {
 
   // 1 1 2 3 5 8 13 21
   println(fibonacci(8))
+//4
 
   def isPrime(n: Int): Boolean = {
     def isPrimeUntil(t: Int): Boolean =
