@@ -19,7 +19,7 @@ object CBNvsCBV extends App {
 
   def infinite(): Int = 1 + infinite()
   def printFirst(x: Int, y: => Int ) = println(x)
-  //test
+
 // if change y=> to y: it will stack overflow because there valued is computed and die 
 // this can be run with call by name because y is not called cause expression is not passed by 
   //  printFirst(infinite(), 34) // stack overflow

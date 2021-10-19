@@ -12,7 +12,7 @@ object OOBasics extends App {
     println(1 + 3)
 
     // method
-    def greet(name: String): Unit = println(s"${this.name} says: Hi, $name")
+    def greet(name: String): Unit = println(s"${this.name} says: Hi, $name") // this.name is called variable in the class
 
     // overloading
     def greet(): Unit = println(s"Hi, I am $name")
@@ -24,7 +24,7 @@ object OOBasics extends App {
 
   val person = new Person("John", 26)
   println(person.x)
-  person.greet("Daniel")
+  person.greet("Daniel") // John says: Hi, Daniel
   person.greet()
 
   val author = new Writer("Charles", "Dickens", 1812)
@@ -37,7 +37,7 @@ object OOBasics extends App {
   val counter = new Counter
   counter.inc.print
   counter.inc.inc.inc.print
-  counter.inc(10000).print
+  counter.inc(10).print
 }
 
 /*
@@ -51,6 +51,8 @@ object OOBasics extends App {
   - isWrittenBy(author)
   - copy (new year of release) = new instance of Novel
  */
+
+
 class Writer(firstName: String, surname: String, val year: Int) {
   def fullName: String = firstName + " " + surname
 }
