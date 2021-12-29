@@ -18,8 +18,8 @@ object MethodNotations extends App {
 
   val mary = new Person("Mary", "Inception")
   println(mary.likes("Inception"))
-  println(mary likes "Inception") // equivalent
-  // infix notation = operator notation (syntactic sugar)
+  println(mary likes "Inception") // equivalent  -- mary = object , likes = method, "inception" = parameter
+  // infix notation = operator notation (syntactic sugar)  -- only use with one parameter
 
   // "operators" in Scala
   val tom = new Person("Tom", "Fight Club")
@@ -42,7 +42,7 @@ object MethodNotations extends App {
 
   // postfix notation
   println(mary.isAlive)
-  println(mary isAlive) // only available with the scala.language.postfixOps import - discouraged
+  println(mary isAlive) // only available with the scala.language.postfixOps import - discouraged -- also use with no parameter
 
   // apply
   println(mary.apply())
@@ -64,7 +64,9 @@ object MethodNotations extends App {
         mary.apply(2) => "Mary watched Inception 2 times"
    */
 
-  println((mary + "the Rockstar").apply())
+  println((mary.+( "the Rockstar")).apply())
+  println((mary + "the rockstar").apply())
+  println((mary + "the rocker ")())
   println((+mary).age)
   println(mary learnsScala)
   println(mary(10))

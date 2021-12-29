@@ -38,6 +38,7 @@ object OOBasics extends App {
   counter.inc.print
   counter.inc.inc.inc.print
   counter.inc(10).print
+  counter.inc(-1).print
 }
 
 /*
