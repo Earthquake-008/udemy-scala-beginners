@@ -259,6 +259,14 @@ class Film (val name: String,val yearofrelease: Int,val imdbrating:Double, val d
 
   def isDirectedBy(director: Director) =
     this.director == director
+
+  def copy(
+            name: String = this.name,
+            yearofrelease: Int = this.yearofrelease,
+            imdbrating: Double = this.imdbrating,
+            director: Director = this.director):
+  Film = new Film(name,yearofrelease,imdbrating,director)
+
 }
 
 val eastwood          = new Director("Clint", "Eastwood", 1930)
@@ -284,3 +292,18 @@ eastwood.yearofbirth
 dieHard.director.name
 invictus.isDirectedBy(nolan)
 memento.directorage
+predator.copy(imdbrating = 8.0)
+predator
+
+//-------------------A Simple Counter-------------------
+class counter(val num: Int){
+  def inc = new counter(num+1 )
+  def dec = new counter(num -1)
+
+  def inc(count: Int ) = new counter(num + count)
+  def dec(count: Int ) = new counter(num - count)
+}
+
+counter(10).inc.inc.inc.num
+counter(10).inc(10).num
+
